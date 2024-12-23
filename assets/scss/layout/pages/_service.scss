@@ -1,0 +1,79 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  30. service CSS START
+/*----------------------------------------*/
+
+.service {
+    &-area {
+        margin-bottom: 120px;
+    }
+    border-radius: 16px;
+    background: var( --bg-color);
+    padding: 30px 8px 8px 8px;
+    // margin-bottom: 120px;
+    &-img {
+        position: relative;
+        border-radius: 8px;
+        img {
+            border-radius: inherit;
+            width: 100%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            inset: 0;           
+            background: linear-gradient(0deg, rgba(1, 15, 28, 0.60) 0%, rgba(1, 15, 28, 0.60) 100%);
+            border-radius: inherit;
+            transition: 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1;
+        }
+    }
+    &:hover &-img::after{
+        opacity: 1;
+        visibility: visible;
+    }
+    &-title {
+        color: var(--title-color);
+        font-family: var(--title-font);
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 12px;
+    }
+    &-info {
+        color: var(--body-color);
+        font-family: var(--body-font);
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    .link {
+        width: 56px;
+        height: 56px;
+        display: inline-block;
+        background: var(--title-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 2;       
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--white);
+        transition: 0.3s;
+        i {
+            transform: rotate(-45deg);
+        }
+        &:hover{
+        background: var(--theme-color-2);
+        color: var(--title-color);
+
+        }
+    }
+}
+

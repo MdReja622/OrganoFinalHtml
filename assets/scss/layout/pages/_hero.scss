@@ -1,0 +1,156 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  30. hero CSS START
+/*----------------------------------------*/
+
+.hero {
+    &-area {
+        position: relative;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(111.75deg, rgba(1, 15, 28, 0.7) 0.65%, rgba(1, 12, 22, 0.6) 12.51%, rgba(0, 5, 9, 0.4) 50.35%, rgba(0, 0, 0, 0) 59%),
+                linear-gradient(90deg, #010F1C -6.42%, rgba(0, 0, 0, 0) 18.87%);
+            pointer-events: none;
+            border-radius: inherit;
+            z-index: 1;
+        }
+
+        &::after {
+            background: linear-gradient(270deg, #010F1C 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%);
+            pointer-events: none;
+        }
+    }
+
+    &-content {
+        padding-top: 340px;
+        padding-bottom: 210px;
+        position: relative;
+        z-index: 2;
+    }
+    &-subtitle {
+        display: inline-flex;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 10px;
+        line-height: 1;
+        background: rgba(var(--white-opacity), 0.1);
+        border-radius: 30px;
+        color: var(--white);
+        font-size: 20px;
+        font-weight: 400;      
+        font-family: var(--body-font);
+        margin-bottom: 10px;
+    }
+    &-title {
+        color: var(--white);
+        font-family: var(--title-font);
+        font-size: 84px;      
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: capitalize;
+        max-width: 720px;
+    }
+    &-info {
+        color: var(--body-color2);
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        max-width: 720px;
+        margin-bottom: 40px;
+    }
+    &-circle{
+        &-wrapper {
+            position: absolute;
+            top: 294px;
+            right: 0;
+            z-index: 3;            
+        }
+        &-logo {
+            position: absolute;
+            right: 33px;
+            top: 35px;
+        }
+        &-text{
+            animation: spin 10s linear infinite;
+        }
+    }
+    
+}
+
+
+.swiper-slide-active {
+    .hero-title{
+        animation: slideUp 1s ease-in-out;
+        transition-delay:  0.3s;
+
+    }
+    .hero-info{
+        animation: slideUp 1s ease-in-out;
+        transition-delay:  0.5s;
+    }
+    .btn-group{
+        animation: slideUp 1s ease-in-out;
+        transition-delay:  0.9s;
+    }
+}
+
+
+// nav arrow 
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    button {
+        display: flex;
+        height: 56px;
+        width: 56px;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--white);
+        border-radius: 50%;
+        color: var(--white);
+        transition: 0.3s;
+        &:hover{
+        background: var(--theme-color-2);
+        border-color: transparent;
+        }
+    }
+}
+
+// pagination 
+.hero-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    width: fit-content;
+    left: 90px;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+span.swiper-pagination-bullet {
+    width: 3px;
+    height: 50px;
+    background: var(--white);
+    opacity: 1 !important;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: var( --theme-color-2);
+
+}

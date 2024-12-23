@@ -1,0 +1,63 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  30. about CSS START
+/*----------------------------------------*/
+.about{
+    &-area {
+        padding: 120px 0;
+        background: var(--bg-color);
+        position: relative;
+        .shapes {
+            img {
+                position: absolute;
+                z-index: 5;
+            }
+            .shape{
+                &-1 {
+                    position: absolute;
+                    top: 30px;
+                    left: 10px;
+                }
+                &-2 {
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }        
+    }
+    &-images {
+        display: flex;
+        gap: 30px;
+        margin-left: -200px;
+    }
+    &-image {
+        border-radius: 300px;
+    }
+    &-list {
+        margin-bottom: 35px;
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            li {
+                list-style: none;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                color: var(--title-color);
+                line-height: 1;
+                i {
+                    color: var(--theme-color-2);
+                }
+            }
+        }        
+    }
+    
+}
+
+
+
+  
+
+

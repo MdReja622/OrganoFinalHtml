@@ -1,0 +1,195 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  ALL Button CSS START
+/*----------------------------------------*/
+//////////////////////////
+.btn-group {
+    display: flex;
+    gap: 40px;
+}
+
+
+
+//////////////////////////
+// base btn 
+@mixin rs-btn {
+    padding: 18.5px 30px;    
+    line-height: 1;
+    height: 56px;
+    text-align: center;
+    text-decoration: none;   
+    cursor: pointer;    
+    display: inline-block;
+    transition: 0.3s all;
+    letter-spacing: 0.6px;   
+    overflow: hidden;
+    position: relative;
+    z-index: 1; 
+    font-family: var(--body-font);
+    border-radius: 30px;
+    font-size: 18px;
+    & i{
+        transform: rotate(-45deg);
+    }
+   
+
+}
+
+//////////////////////////
+// hover effect btn 
+@mixin after-effect {
+    position: absolute;
+    content: '';
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0.8) scaleY(0);
+    transform-origin: bottom center;
+    border-radius: inherit;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+
+////////////////////
+/// yellow btn 
+.rs-btn-yellow{
+    @include rs-btn;
+    background: var(--theme-color-2);
+    color: var(--title-color);
+
+}
+.hero-transparent{
+    @include rs-btn;
+    border: 1px solid;   
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+.rs-btn-blue{
+    @include rs-btn;
+    background: var(--theme-color-1);
+    color: var(--white);
+}
+
+.rs-btn-transparent{
+    @include rs-btn;    
+    border: 1px solid var(--theme-color-1);
+    color: var(--theme-color-1);
+}
+
+
+
+//////////////////////////
+// dark blue btn 
+.rs_btn-dark-blue {
+    @include rs_btn;
+    color: var(--rs-white);
+    background: var(--rs-title-color);
+    padding: 14px 35px;
+    box-shadow: 0px 20px 55px -3px rgba(14, 49, 119, 0.25);
+
+    &::after {
+        @include after-effect;
+        background: var(--rs-blue-gradient);
+    }
+
+    &:hover {
+        color: var(--rs-white);
+
+        &::after {
+            transform: scaleX(1) scaleY(1);
+        }
+    }
+}
+
+
+//////////////////////////
+// blue btn 
+.rs_btn-blue {
+    @include rs_btn;
+    color: var(--rs-white);
+    background: var(--rs-blue-gradient);
+    box-shadow: 0px 20px 55px -3px rgba(14, 49, 119, 0.25);
+
+    &::after {
+        @include after-effect;
+        background: var(--rs-title-color);
+    }
+
+    &:hover {
+        color: var(--rs-white);
+
+        &::after {
+            transform: scaleX(1) scaleY(1);
+        }
+    }
+}
+
+//////////////////////////
+// outline btn
+.rs_btn-outline {
+    @include rs_btn;
+    font-family: var(--rs-ff-title-font);
+    color: var(--rs-title-color);
+    border: 1px solid var(--rs-border-color);
+    padding: 16px 35px;
+
+    &::after {
+        @include after-effect;
+        background: var(--rs-title-color);
+    }
+
+    &:hover {
+        color: var(--rs-white);
+
+        &::after {
+            transform: scaleX(1) scaleY(1);
+        }
+    }
+}
+
+
+
+
+//////////////////////////
+// slider navigation 
+
+.rs_slider-nav {
+    button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--rs-smoke-alpha);
+        color: var(--rs-theme-1);
+        transition: 0.3s;
+
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background: var(--rs-theme-1);
+            color: var(--rs-white);
+
+
+        }
+    }
+
+}
+
+.rs_slider-nav-2 {
+    button {
+        color: var(--rs-white);
+
+        &:hover {
+            background: var(--rs-theme-2);
+            color: var(--rs-black);
+        }
+    }
+
+}

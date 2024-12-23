@@ -1,0 +1,148 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  30. featured CSS START
+/*----------------------------------------*/
+.featured-area {
+    margin: 120px 0;
+    .features-btn {
+        display: flex;
+        justify-content: end;
+        height: 100%;
+        align-items: end;
+    }
+}
+
+
+
+.product{
+    &-card {
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        padding: 20px;
+        transition: 0.3s;
+        .ratings {
+            margin-bottom: 13px;
+            i {
+                color: var(--star-color);
+            }
+        }
+                
+        .tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--smoke-color-2);
+            height: 20px;
+            line-height: 1;
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: var(--title-color);
+            font-family: Roboto;
+            font-size: 12px;
+            font-weight: 400;
+            z-index: 2;
+            transition: 0.3s;
+
+
+        }
+    }
+    &-img {
+        height: 205px;        
+        border-bottom: 1px solid var(--border-color);
+        padding-top: 20px;
+        margin-bottom: 22px;
+        position: relative;
+        overflow: hidden;
+        img {
+            max-width: 100%;            
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 5px;
+            background: rgba(6, 70, 53, 0.60);
+            transition: 0.3s;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    &-title a {
+        color: var(--title-color);
+        text-align: center;
+        font-family: Signika;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+    &-price {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+        .current-price {
+            color: var(--body-color);
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .compare-price {
+            color: #FF0202;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            text-decoration: line-through;
+        }
+    }
+    
+}
+
+
+.hover-social {
+    position: absolute;
+    top:100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    display: flex;
+    gap: 10px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    .social-link {
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        background: var(--white);
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        color: var(--theme-color-1);
+        transition: 0.3s;
+        &:hover {   
+            background: var(--theme-color-1);
+            color: var(--white);
+        }
+    }
+}
+
+.product-card{
+    border-color: var( --theme-color-2);
+    &:hover .hover-social{
+        top:50%;
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover .tag{   
+        background: var(--theme-color-1); 
+        color: var(--white);
+    }
+    &:hover .product-img::after  {   
+        opacity: 1;
+        visibility: visible;
+    }
+}
