@@ -131,7 +131,9 @@
 }
 
 .product-card{
-    border-color: var( --theme-color-2);
+   &:hover{
+     border-color: var( --theme-color-2);
+   }
     &:hover .hover-social{
         top:50%;
         opacity: 1;

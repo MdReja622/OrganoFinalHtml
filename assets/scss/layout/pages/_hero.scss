@@ -24,6 +24,9 @@
             background: linear-gradient(270deg, #010F1C 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%);
             pointer-events: none;
         }
+        & .bg-img{
+            background-size: cover;
+        }
     }
 
     &-content {

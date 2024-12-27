@@ -75,6 +75,41 @@
 
 
 	////////////////////////////////////////////////////
+	// increase decrease Js
+	const counterDisplay = document.querySelector('.quantity');
+	const increaseButton = document.querySelector('.increase');
+	const decreaseButton = document.querySelector('.decrease');
+	let counterValue = parseInt(counterDisplay.value) || 1;
+
+	// Function to update the input value
+	const updateCounter = () => {
+		counterDisplay.value = counterValue;
+	};
+
+	// Increase button event
+	increaseButton.addEventListener('click', (e) => {
+		e.preventDefault();
+		counterValue++;
+		updateCounter();
+	});
+
+	// Decrease button event
+	decreaseButton.addEventListener('click', (e) => {
+		e.preventDefault();
+		if (counterValue > 1) {
+			counterValue--;
+			updateCounter();
+		}
+	});
+
+
+
+
+
+
+
+
+	////////////////////////////////////////////////////
 	// 05. Data-Background Js
 	$("[data-background]").each(function () {
 		// Set the background image

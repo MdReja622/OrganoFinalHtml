@@ -3,49 +3,30 @@
 /*----------------------------------------*/
 /*  30. about CSS START
 /*----------------------------------------*/
-
-
-.rs_banner-sub-title {
-    color: var(--Secondary-color, #F8CA38);
-    font-family: Signika;
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.rs_banner-title {
-    color: var(--White, #FFF);
-    font-family: Signika;
-    font-size: 84px;
-    font-weight: 700;
-
-    @media #{$xl} {
-        font-size: 70px;
+.banner-area{
+    background: var(--title-color);
+    padding: 85px 0;
+    .banner-content {
+        padding-top: 35px;
     }
-
-    @media #{$lg} {
-        font-size: 50px;
+    .banner-sub {
+        color: var(--theme-color-2);
+        font-family: var(--title-font);
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        display: inline-block;
+        line-height: 1;
     }
-}
-
-.banner-content p {
-    color: var(--Body-Color-P-2, #BCBCBC);
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 35px;
-
-}
-
-
-.rs_banner-img {
-    margin-right: -120px;
-
-    @media #{$xl, $lg, $md, $xs} {
-        margin-right: 0;
-
+   .title-banner {
+        color: var(--white);
+        font-size: 84px;
+        margin-bottom: 12px;
     }
-}
-
-.rs_banner-img img {
-    width: 100%;
+    .info {
+        color: var(--body-color2);
+        margin-bottom: 40px;
+        max-width: 738px;
+        margin-left: 0;
+    }
 }

@@ -1,0 +1,97 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  30. Review CSS START
+/*----------------------------------------*/
+
+.review{
+    &-area {
+        padding: 120px 0;
+        position: relative;
+    }
+    &-price {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        margin-bottom: 35px;
+        .current-price {
+            color: var(--theme-color-1);
+            font-family: var(--body-font);
+            font-size: 50px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .copare-price {
+            color: var(--body-color);
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            text-decoration: line-through;
+        }
+    }
+    &-form {
+        display: flex;
+        gap: 30px;
+    }
+    &-btn i {
+        transform: rotate(0);
+        margin-left: 5px;
+    }
+    &-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+.style-review{
+    .title {
+       color: var(--theme-color-1);
+       margin: 0;
+    }
+    .style-title {
+       -webkit-text-stroke-width: 3px;
+       -webkit-text-stroke-color: var(--theme-color-1);
+       color: transparent;
+       font-family: var(--body-font);
+       margin-bottom: 15px;
+   }
+}
+
+
+
+.quantity-wrapper {
+    display: flex;
+    gap: 10px;
+    button {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+        background: var(--title-color);
+        border-radius: 50%;
+        border-radius: 56px;  
+       
+    }
+    .quantity {
+        max-width: 113px;
+        border-radius: 50px;
+        height: 56px;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        border-radius: 56px;
+        border: 0.75px solid var(--smoke-color-2);
+        background: var(--title-color);
+        color: var(--white);
+        &::placeholder{
+            font-size: 30px;
+            color: var(--white);
+        }
+    }
+}
+
+

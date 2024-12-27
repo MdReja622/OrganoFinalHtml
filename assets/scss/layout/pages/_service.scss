@@ -7,6 +7,9 @@
 .service {
     &-area {
         margin-bottom: 120px;
+        .more-link-btn a {
+            margin: auto;
+        }
     }
     border-radius: 16px;
     background: var( --bg-color);
