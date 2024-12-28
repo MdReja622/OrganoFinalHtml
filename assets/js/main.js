@@ -65,8 +65,8 @@
 			clickable: true,
 		},
 		navigation: {
-			nextEl: ".button-next",
-			prevEl: ".button-prev",
+			nextEl: ".nav-arrow .button-next",
+			prevEl: ".nav-arrow .button-prev",
 		},
 	});
 
@@ -103,8 +103,42 @@
 	});
 
 
+	///////////////////////////////////////////
+	// trending tab 
+	// Initialize Swiper sliders
+	const sliders = document.querySelectorAll('.trending-slider');
+	sliders.forEach((slider) => {
+		new Swiper(slider, {
+			pagination: {
+				el: slider.querySelector('.swiper-pagination'),
+				clickable: true,
+			},
+			autoplay: {
+				delay: 3000,
+			},
+			loop: true,
+			navigation: {
+				nextEl: ".tab-nav .button-next",
+				prevEl: ".tab-nav .button-prev",
+			},
+		});
+	});
 
+	// Tab switching functionality
+	const tabs = document.querySelectorAll('.tab');
+	const tabContents = document.querySelectorAll('.tab-content');
 
+	tabs.forEach((tab) => {
+		tab.addEventListener('click', () => {
+			const tabId = tab.dataset.tab;
+
+			tabs.forEach((t) => t.classList.remove('active'));
+			tabContents.forEach((content) => content.classList.remove('active'));
+
+			tab.classList.add('active');
+			document.getElementById(`tab-${tabId}`).classList.add('active');
+		});
+	});
 
 
 

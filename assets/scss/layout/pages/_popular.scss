@@ -88,6 +88,10 @@
     border: 1px solid var(--border-color);
     background: var(--white);
     padding: 5px 10px 10px 20px;
+    transition: 0.3s;
+    &:hover{
+        border-color: var(--theme-color-2);
+    }
     .product-img {
         height: inherit;
         border: none;
