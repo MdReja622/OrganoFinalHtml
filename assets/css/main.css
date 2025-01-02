@@ -356,31 +356,6 @@
 /*----------------------------------------*/
 /*  SECTION TITLE CSS START
 /*----------------------------------------*/
-.rs_section-sub-title {
-  font-family: var(--rs-ff-roboto);
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  background: var(--rs-smoke-2);
-  color: var(--rs-theme-1);
-  display: inline-flex;
-  align-items: center;
-  border-radius: 30px;
-  padding: 10px 20px;
-}
-.rs_section-sub-title img {
-  margin-right: 10px;
-  width: 20px;
-}
-.rs_section-title {
-  color: var(--rs-title-color);
-  font-family: var(--rs-ff-Signika);
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: capitalize;
-}
-
 .title-area .sub-title {
   font-size: 16px;
   font-weight: 400;
@@ -405,6 +380,7 @@
   font-size: 64px;
   font-weight: 600;
   text-transform: capitalize;
+  line-height: 1;
 }
 .title-area .info {
   color: var(--body-color);
@@ -1066,13 +1042,19 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.funfact-items.container {
+  max-width: 1305px;
+}
 .funfact-item {
   text-align: center;
-  max-width: 180px;
+  max-width: 231px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
+  border-radius: 16px;
+  background: var(--smoke-color-2);
+  padding: 30px 25px;
 }
 .funfact-icon {
   width: 85px;
@@ -1686,6 +1668,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 /*----------------------------------------*/
 .trending-tab-area {
   padding: 120px 0;
+  position: relative;
 }
 .trending-tab-area .tab-header {
   display: flex;
@@ -1744,155 +1727,198 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 .trending-tab-area .tab-content.active {
   display: block;
 }
+.trending-tab-area .shape-1 {
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+.trending-tab-area .shape-2 {
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+}
+
+.trending-banner {
+  display: flex;
+  align-items: end;
+}
+.trending-banner.bg-img {
+  background-size: cover;
+  height: 100%;
+  border-radius: 16px;
+}
+.trending-banner-content {
+  text-align: center;
+  padding: 100px 38px 30px;
+  position: relative;
+  z-index: 2;
+}
+.trending-banner-content::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  background: linear-gradient(179deg, rgba(0, 0, 0, 0) 0.56%, rgba(1, 15, 28, 0.6) 56.9%);
+  z-index: -1;
+}
+.trending-banner-content .sub-title {
+  color: var(--theme-color-2);
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.trending-banner-content .title {
+  color: var(--white);
+  font-family: Signika;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.trending-banner-btn .rs-btn-yellow {
+  margin: auto;
+  height: 49px;
+}
 
 /*----------------------------------------*/
 /*  30. Team  CSS START
 /*----------------------------------------*/
-.rs_team-card {
-  padding: 10px;
-  padding-bottom: 30px;
-  background: var(--rs-smoke-2);
-  border-radius: 30px;
-  transition: 0.3s;
+.team-area {
+  background: var(--bg-color);
+  padding: 120px 0;
+  position: relative;
 }
-.rs_team-card:hover {
-  background: var(--rs-theme-1);
+.team-area .team-btn {
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: end;
 }
-.rs_team-img {
-  border-radius: inherit;
-  overflow: hidden;
-}
-.rs_team-img img {
-  border-radius: inherit;
-  transition: 0.3s;
-}
-.rs_team-name {
-  color: var(--rs-title-color);
-  font-family: var(--rs-ff-Signika);
-  font-size: 24px;
-  font-weight: 600;
-}
-.rs_team-info {
-  color: var(--rs-theme-1);
-  font-family: var(--rs-ff-roboto);
-  font-size: 14px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-.rs_team-card:hover .rs_team-name, .rs_team-card:hover .rs_team-info {
-  color: var(--rs-white);
-}
-.rs_team-card:hover .rs_team-img img {
-  transform: scale(1.1);
-}
-
-.rs_team-shape-1 {
+.team-area .shape-1 {
   position: absolute;
   left: 0;
   bottom: 50px;
 }
-@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
-  .rs_team-shape-1 {
-    display: none;
-  }
-}
-.rs_team-shape-2 {
+.team-area .shape-2 {
   position: absolute;
   right: 0;
   bottom: 50px;
 }
-@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
-  .rs_team-shape-2 {
-    display: none;
-  }
-}
 
-.rs_social-icons ul {
-  list-style: none;
-  padding: 0;
+.member-card {
+  border-radius: 16px;
+  background: var(--smoke-color-2);
+  padding: 10px;
+  padding-bottom: 30px;
+  transition: 0.3s;
+}
+.member-card:hover {
+  background: var(--theme-color-1);
+}
+.member-img {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.member-img:hover img {
+  transform: scale(1.1);
+}
+.member-content {
+  text-align: center;
+}
+.member-content .social-links {
   margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
-.rs_social-icons ul li {
-  display: inline-block;
-  margin: 0 6.5px;
-}
-.rs_social-icons ul li a {
-  display: block;
+.member-content .social-links li a {
   width: 40px;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: var(--rs-theme-1);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  font-size: 14px;
+  line-height: 1;
+  color: var(--theme-color-1);
   transition: 0.3s;
-  background: var(--rs-white);
+}
+.member-content .social-links li a:hover {
+  color: var(--white);
+  background: var(--theme-color-1);
+}
+.member-name {
+  color: var(--title-color);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 34px;
+  text-transform: capitalize;
+  line-height: 1;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+.member-desig {
+  color: var(--theme-color-1);
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.member-card:hover .member-name {
+  color: var(--white);
+}
+.member-card:hover .member-desig {
+  color: var(--white);
 }
 
 /*----------------------------------------*/
 /*  30. Fact  CSS START
 /*----------------------------------------*/
-.rs_fact-overlay {
-  position: relative;
-  overflow: hidden;
+.fact-area {
+  padding: 75px 0;
 }
-.rs_fact-overlay::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(1, 15, 28, 0.6);
-  z-index: 1;
-}
-.rs_fact-items {
-  position: relative;
-  z-index: 2;
-}
-.rs_fact-item {
+.fact-area .facts {
   display: flex;
-  align-items: center;
-  gap: 13px;
-  margin-bottom: 30px;
+  justify-content: space-between;
 }
-.rs_fact-icon {
+.fact-area .fact {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.fact-area .fact-icon {
+  border-radius: 50%;
+  border: 1px solid rgba(var(--white-opacity), 0.3);
+  background: rgba(var(--white-opacity), 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
   width: 80px;
   height: 80px;
-  display: inline-flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  border-radius: 40px;
-  border: 1px solid var(--rs-white-05);
-  background: var(--rs-white-01);
-  backdrop-filter: blur(10px);
+  justify-content: center;
 }
-.rs_fact-counter {
-  color: var(--rs-theme-2);
-  font-family: var(--rs-ff-Signika);
-  font-size: 64px;
-  font-weight: 600;
-  line-height: 1;
-  margin: 0;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .rs_fact-counter {
-    font-size: 55px;
-  }
-}
-.rs_fact-info {
-  color: var(--rs-white);
-  font-family: Roboto;
+.fact-area .fact-info {
+  color: var(--white);
   font-size: 16px;
   font-weight: 400;
 }
-
-.rs_fact-item-3 {
-  justify-content: end;
-}
-.rs_fact-item-4 {
-  justify-content: end;
+.fact-area .count-box {
+  color: var(--theme-color-2);
+  font-size: 64px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0;
+  line-height: 1;
 }
 
 /*----------------------------------------*/

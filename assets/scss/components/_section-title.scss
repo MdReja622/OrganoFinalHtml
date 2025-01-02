@@ -4,35 +4,6 @@
 /*  SECTION TITLE CSS START
 /*----------------------------------------*/
 
-
-.rs_section {
-    &-sub-title {
-        font-family: var(--rs-ff-roboto);
-        font-size: 16px;
-        font-weight: 400;
-        margin-bottom: 20px;
-        background: var(--rs-smoke-2);
-        color: var(--rs-theme-1);
-        display: inline-flex;
-        align-items: center;
-        border-radius: 30px;
-        padding: 10px 20px;
-
-        img {
-            margin-right: 10px;
-            width: 20px;
-        }
-    }
-
-    &-title {
-        color: var(--rs-title-color);
-        font-family: var(--rs-ff-Signika);
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 1.2;
-        text-transform: capitalize;
-    }
-}
 .title-area{    
     .sub-title{
         font-size: 16px;
@@ -58,6 +29,7 @@
         font-size: 64px;
         font-weight: 600;
         text-transform: capitalize;
+        line-height: 1;
     }
     .info{
         color: var(--body-color);

@@ -109,10 +109,8 @@
 	const sliders = document.querySelectorAll('.trending-slider');
 	sliders.forEach((slider) => {
 		new Swiper(slider, {
-			pagination: {
-				el: slider.querySelector('.swiper-pagination'),
-				clickable: true,
-			},
+			slidesPerView: 3,
+			spaceBetween: 30,
 			autoplay: {
 				delay: 3000,
 			},

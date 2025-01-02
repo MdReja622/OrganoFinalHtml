@@ -3,77 +3,45 @@
 /*----------------------------------------*/
 /*  30. Fact  CSS START
 /*----------------------------------------*/
-.rs_fact {
-    &-overlay {
-        position: relative;
-        overflow: hidden;
-
-        &::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(1, 15, 28, 0.60);
-            z-index: 1;
-        }
-    }
-
-    &-items {
-        position: relative;
-        z-index: 2;
-    }
-
-    &-item {
+.fact-area {
+    padding: 75px 0;
+    .facts {
         display: flex;
-        align-items: center;
-        gap: 13px;
-        margin-bottom: 30px;
+        justify-content: space-between;
     }
-
-    &-icon {
-        width: 80px;
-        height: 80px;
-        display: inline-flex;
-        justify-content: center;
+    .fact {
+        display: flex;
+        gap: 15px;
         align-items: center;
-        border-radius: 50%;
-        border-radius: 40px;
-        border: 1px solid var(--rs-white-05);
-        background: var(--rs-white-01);
-        backdrop-filter: blur(10px);
+        &-icon {
+            border-radius: 50%;
+            border: 1px solid rgba(var(--white-opacity), 0.30);
+            background: rgba(var(--white-opacity), 0.10);
+            backdrop-filter: blur(10px);
+            display: flex;
+            width: 80px;
+            height: 80px;
+            align-items: center;
+            justify-content: center;
+        }
+        &-info {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
     }
-
-    &-counter {
-        color: var(--rs-theme-2);
-        font-family: var(--rs-ff-Signika);
+    .count-box {
+        color: var(--theme-color-2);
         font-size: 64px;
         font-weight: 600;
-        line-height: 1;
+        text-transform: capitalize;
         margin: 0;
-
-        @media #{$lg} {
-            font-size: 55px;
-
-        }
+        line-height: 1;
     }
-
-    &-info {
-        color: var(--rs-white);
-        font-family: Roboto;
-        font-size: 16px;
-        font-weight: 400;
-    }
-
+    
 }
 
-.rs_fact-item {
-    &-3 {
-        justify-content: end;
-    }
 
-    &-4 {
-        justify-content: end;
-    }
-}
+
+

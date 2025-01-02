@@ -3,102 +3,111 @@
 /*----------------------------------------*/
 /*  30. Team  CSS START
 /*----------------------------------------*/
-.rs_team {
-    &-card {
-        padding: 10px;
-        padding-bottom: 30px;
-        background: var(--rs-smoke-2);
-        border-radius: 30px;
-        transition: 0.3s;
 
-        &:hover {
-            background: var(--rs-theme-1);
-        }
+.team-area {
+    background: var(--bg-color);
+    padding: 120px 0;
+    position: relative;
+    .team-btn {
+        height: 100%;
+        display: flex;
+        align-items: end;
+        justify-content: end;
     }
-
-    &-img {
-        border-radius: inherit;
-        overflow: hidden;
-
-        img {
-            border-radius: inherit;
-            transition: 0.3s;
-        }
-    }
-
-    &-name {
-        color: var(--rs-title-color);
-        font-family: var(--rs-ff-Signika);
-        font-size: 24px;
-        font-weight: 600;
-    }
-
-    &-info {
-        color: var(--rs-theme-1);
-        font-family: var(--rs-ff-roboto);
-        font-size: 14px;
-        font-weight: 400;
-        margin-bottom: 20px;
-    }
-
-    &-card:hover &-name,
-    &-card:hover &-info {
-        color: var(--rs-white);
-    }
-
-    &-card:hover &-img img {
-        transform: scale(1.1);
-    }
-
-}
-
-.rs_team {
-    &-shape {
+    .shape{
         &-1 {
             position: absolute;
             left: 0;
             bottom: 50px;
-
-            @media #{$xxl, $xl, $lg} {
-                display: none;
-            }
-
         }
-
         &-2 {
             position: absolute;
             right: 0;
             bottom: 50px;
+        }
+    }    
+   
+}
+.member{ 
+    &-card {
+        border-radius: 16px;
+        background: var(--smoke-color-2);
+        padding: 10px;
+        padding-bottom: 30px;
+        transition: 0.3s;
+        &:hover{
+            background: var(--theme-color-1);
 
-            @media #{$xxl, $xl, $lg} {
-                display: none;
-            }
+        }
+        
+    }
+   &-img {
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        &:hover img{
+            transform: scale(1.1);
         }
     }
-}
-
-.rs_social-icons {
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-            display: inline-block;
-            margin: 0 6.5px;
-
-            a {
-                display: block;
+   &-content {
+        text-align: center;
+        & .social-links {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            & li a {
                 width: 40px;
                 height: 40px;
-                line-height: 40px;
-                text-align: center;
-                color: var(--rs-theme-1);
+                background: var(--white);
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 border-radius: 50%;
-                font-size: 14px;
+                line-height: 1;
+                color: var(--theme-color-1);
                 transition: 0.3s;
-                background: var(--rs-white);
+                
+                &:hover{
+                    color: var(--white);
+                    background: var(--theme-color-1); 
+                }
+                
             }
         }
     }
+   &-name {
+        color: var(--title-color);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 34px;
+        text-transform: capitalize;
+        line-height: 1;
+        margin-bottom: 5px;
+        transition: 0.3s;
+
+    }
+   &-desig {
+        color: var(--theme-color-1);
+        font-size: 14px;
+        font-weight: 400;
+        display: inline-block;
+        margin-bottom: 20px;
+        transition: 0.3s;
+
+    }
+    &-card:hover &-name {
+        color: var(--white);
+    }
+    &-card:hover &-desig {
+        color: var(--white);
+    }
+
 }
+
+
+
+
