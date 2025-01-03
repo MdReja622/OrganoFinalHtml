@@ -156,6 +156,32 @@
 		$(this).css("background-color", $(this).attr("data-bg-color"))
 	})
 
+	////////////////////////////////////////////
+	// Question Video play
+	const video = document.querySelector('#questionVideo');
+	const playButton = document.querySelector('#playButton');
 
+	playButton.addEventListener('click', () => {
+		video.play();
+		playButton.classList.add('hidden');
+		video.setAttribute('controls', 'controls');
+	});
 
+	video.addEventListener('pause', () => {
+		playButton.classList.remove('hidden');
+		video.removeAttribute('controls');
+	});
+	///////////////////////////////////////////////
+	// Testionial
+	const testimonial = new Swiper('.testimonial', {
+
+		loop: true,
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.testimonial-nav .button-next',
+			prevEl: '.testimonial-nav .button-prev',
+		},
+
+	});
 })(jQuery);

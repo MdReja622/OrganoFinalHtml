@@ -16,7 +16,7 @@
         align-items: center;
         gap: 10px;
         padding: 10px 20px;
-        margin-bottom: 15px;
+        margin-bottom: 17px;
         border-radius: 30px;
         background: var(--smoke-color-2);
         img{
@@ -30,6 +30,7 @@
         font-weight: 600;
         text-transform: capitalize;
         line-height: 1;
+        margin-bottom: 20px;
     }
     .info{
         color: var(--body-color);
@@ -42,3 +43,13 @@
     }
 }
 
+.title-area.style-white{
+    .sub-title {
+        background: rgba(var(--white-opacity), 0.10);
+        color: var(--white);
+    }
+    .title {
+        color: var(--white);
+        font-size: 48px;
+    }
+}

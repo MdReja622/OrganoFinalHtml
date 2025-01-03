@@ -1,0 +1,95 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  30. question CSS START
+/*----------------------------------------*/
+.question {
+    &-area{
+        padding: 120px 0;
+    }
+    &-video {
+        padding-left: 50px;
+        border-radius: 30px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        & video {
+            border-radius: inherit;    
+            width: 100%;
+            height: 100%;
+            object-fit: cover;       
+        }
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            left: 50px;
+            border-radius: inherit;
+            z-index: 1;
+            background: rgba(1, 15, 28, 0.50);
+        }
+        .play-btn {
+            width: 120px;
+            height: 120px;
+            border: 1px solid var(--white);
+            border-radius: 50%;
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 50%;
+            transform: translate(-28%, -50%);
+            font-size: 50px;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            &:hover{
+                background: var(--theme-color-2);
+                border-color: var(--theme-color-2);
+                color: var(--title-color);
+            }
+            &.hidden{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+    }
+    &-title {
+        color: var(--theme-color-1);
+        font-family: Roboto;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 35px;
+    }
+    &-inputs {
+        border-radius: 32px;
+        background: var(--smoke-color-2);
+        padding: 60px;
+        & .input-group{
+            input {
+                border-radius: 50px !important;
+                border: 1px solid var(--theme-color-1);
+                background: transparent;
+                width: 100%;
+            }
+            span {
+                position: absolute;
+                right: 23px;
+                top: 17px;
+                i {
+                    color: var(--theme-color-1);
+                }
+            }
+            textarea {
+                border-radius: 16px !important;
+                border: 1px solid var(--theme-color-1);
+                background: transparent;
+            }
+        }
+    }
+}
+
+
+
